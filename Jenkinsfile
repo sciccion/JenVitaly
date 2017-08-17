@@ -27,7 +27,7 @@ pipeline {
     }
     stage('run app') {
       steps {
-        sh 'exec /usr/bin/groovy first.groovy'
+        sh '/usr/bin/groovy first.groovy'
       }
     }
     stage('check result') {
