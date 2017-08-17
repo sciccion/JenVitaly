@@ -6,7 +6,7 @@ pipeline {
     
   }
   stages {
-    stage('') {
+    stage('error') {
       steps {
         parallel(
           "First step": {
@@ -42,7 +42,7 @@ pipeline {
     }
     stage('git') {
       steps {
-        git(url: 'git@github.com:sciccion/JenVitaly.git', branch: '/master', poll: true)
+        git(url: 'git@github.com:sciccion/JenVitaly.git', branch: '/master', poll: true, credentialsId: 'c1372f54-03e8-4986-af3b-293c4afff74e')
       }
     }
   }
