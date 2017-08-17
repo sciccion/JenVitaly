@@ -25,11 +25,6 @@ pipeline {
         fileExists 'first.groovy'
       }
     }
-    stage('Install Groovy') {
-      steps {
-        sh 'apt-get update && apt-get install groovy'
-      }
-    }
     stage('run app') {
       steps {
         sh 'exec /usr/bin/groovy first.groovy'
