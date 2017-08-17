@@ -16,6 +16,10 @@ pipeline {
           "Date": {
             sh 'date'
             
+          },
+          "git": {
+            git(credentialsId: 'c1372f54-03e8-4986-af3b-293c4afff74e', branch: '/dev', url: 'git@github.com:sciccion/JenVitaly.git', poll: true)
+            
           }
         )
       }
@@ -33,11 +37,6 @@ pipeline {
     stage('check result') {
       steps {
         fileExists 'rp.txt'
-      }
-    }
-    stage('git') {
-      steps {
-        git(url: 'git@github.com:sciccion/JenVitaly.git', branch: '/master', poll: true, credentialsId: 'c1372f54-03e8-4986-af3b-293c4afff74e')
       }
     }
   }
