@@ -18,7 +18,7 @@ pipeline {
             
           },
           "git": {
-            git(credentialsId: 'c1372f54-03e8-4986-af3b-293c4afff74e', branch: '/dev', url: 'git@github.com:sciccion/JenVitaly.git', poll: true)
+            git(credentialsId: 'c1372f54-03e8-4986-af3b-293c4afff74e', branch: 'dev', url: 'git@github.com:sciccion/JenVitaly.git', poll: true)
             
           }
         )
